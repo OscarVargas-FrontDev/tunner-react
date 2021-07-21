@@ -1,10 +1,13 @@
 import './App.css';
+import Tunner from './components/Tunner';
+import {Container} from '@material-ui/core';
+
 
 function App() {
   return (
-    <div className="App">
-      <h1>Afinador en Construccion</h1>
-    </div>
+    <Container className="App">
+      <Tunner/>
+    </Container>
   );
 }
 

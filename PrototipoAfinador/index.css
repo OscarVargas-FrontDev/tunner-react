@@ -1,0 +1,50 @@
+:root {
+    --colorBlack: #313131;
+    --colorGreen: #31b42f;
+    --colorRed: #ce2e2e;
+}
+
+* {
+    margin: 0px;
+}
+
+.record {
+    color: white;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    background-color: var(--colorGreen);
+    -webkit-box-shadow: 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+div {
+    display: flex;
+    justify-content: center;
+}
+
+.visualizer {
+    border-radius: 10px;
+}
+
+.record.is-active {
+    background-color: var(--colorRed);
+    animation: btn .5s ease forwards;
+    transition: all 1s ease;
+}
+
+@keyframes btn {
+    80% {
+        width: 60px;
+        height: 60px;
+    }
+    100% {
+        width: 50px;
+        height: 50px;
+    }
+}
