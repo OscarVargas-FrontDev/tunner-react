@@ -3,12 +3,11 @@ import ButtonMic from './ButtonMic';
 
 function TunnerDisplay({turn, onTurnChange}) {
 
-    console.log(onTurnChange);
-
     const handleClick = (e) =>{
 
         e.preventDefault();
         onTurnChange();
+        
     }
 
     return (

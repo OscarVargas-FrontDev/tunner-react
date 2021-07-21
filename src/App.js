@@ -1,13 +1,28 @@
 import './App.css';
 import Tunner from './components/Tunner';
-import {Container} from '@material-ui/core';
+import {Paper} from '@material-ui/core';
+import {ThemeProvider, createTheme} from '@material-ui/core/styles'
+import React, { useState } from 'react';
+
+
 
 
 function App() {
+
+  const [darkMode, setDarkMode] = useState(true);
+  
+  const theme = createTheme({
+    palette:{
+      type: darkMode ? "dark" : "light",
+    }
+  })
+
   return (
-    <Container className="App">
-      <Tunner/>
-    </Container>
+    <ThemeProvider theme={theme}>
+      <Paper className="App">
+        <Tunner/>
+      </Paper>
+    </ThemeProvider>
   );
 }
 

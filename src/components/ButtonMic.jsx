@@ -3,8 +3,8 @@ import {IconButton} from '@material-ui/core';
 import {Mic, PowerSettingsNew} from '@material-ui/icons';
 import { green, red } from '@material-ui/core/colors';
 
-function ButtonMic({turn, onClick}) {
 
+function ButtonMic({turn, onClick}) {
 
     return (
         <IconButton 

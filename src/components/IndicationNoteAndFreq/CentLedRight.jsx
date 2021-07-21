@@ -16,10 +16,23 @@ function CentLedRight({cent}) {
 
     const Led = (cent) =>{
 
-        if(cent >= 10){
-            return <FastRewind className = {classes.root}/>
-        }else
-            return <ArrowLeft className = {classes.root}/>
+        if (cent >= 10) {
+            return <FastRewind
+                className={classes.root}
+            />
+        }
+
+        if (cent < 10 && cent > 5) {
+            return <ArrowLeft
+                className={classes.root}
+            />
+        }
+        if (cent <= 5 && cent > -5) {
+            return <ArrowLeft
+                className={classes.root}
+                style={{ color: green[500] }}
+            />
+        }
     };
 
     return (
