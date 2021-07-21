@@ -43,12 +43,6 @@ function Tunner() {
     };
 
     useEffect(() => {
-        
-        turn === "on"? alert("on") : alert("off");
-
-    },[turn]);
-
-    useEffect(() => {
         return () => cancelAnimationFrame(requestRef.current);
     },[]);
 
@@ -88,20 +82,10 @@ function Tunner() {
                 pitch = sortedPitchHistory[Math.floor(sortedPitchHistory.length - 1 / 2)];
                 numNote = noteFromPitch(pitch);
                 setCent(centsOffFromPitch(pitch, numNote) || cent);
-                setFrequency(frequencyFromNoteNumber(numNote) > 1500 ? 440 : frequencyFromNoteNumber(numNote));
+                setFrequency(frequencyFromNoteNumber(numNote));
                 octave = octaveFromPitch(pitch, Notas) || octave;
                 setNote(noteNamefromNote(numNote, Notas) || note);
 
-                if (cent <= 10 && cent >= -10) {
-
-                    console.log("Afinado");
-
-                } else if (cent < 10) {
-                    console.log("Subir");
-                    
-                } else
-
-                    console.log("Bajar");
 
                 if (pitchHistory.length < limitPitchHist) {
 
@@ -112,7 +96,6 @@ function Tunner() {
                     setTimeout(() => {
                         requestRef.current = requestAnimationFrame(updatePitch);
                     }, 70);
-
                 }
 
 

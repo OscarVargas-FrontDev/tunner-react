@@ -29,7 +29,7 @@ export const noteNamefromNote = (note, table) => {
         return nota.name;
     }
 
-    return console.log("Frecuencia no registrable");
+    return;
 
 }
 
